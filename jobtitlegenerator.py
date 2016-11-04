@@ -1,5 +1,4 @@
-
-import random 
+import random
 
 adjective1 = [
     "Key",
@@ -7,7 +6,7 @@ adjective1 = [
     "Main",
     "Chief",
     "Assistant to",
-    "Advisor to",
+    "Advisory to",
     "Personal Assistant to",
     "Part Time",
     ""
@@ -25,7 +24,7 @@ adjective2 = [
     "Global",
     "Assistant",
     "Independent",
-    "Fulltime",
+    "Full-time",
     "Division",
     "National",
     "Creative",
@@ -81,7 +80,7 @@ adjective3 = [
     "Leasing",
     "Strategy",
     "Planning",
-    "Due Dilligence",
+    "Due Diligence",
     "Loan",
     "Risk",
     "Valuations",
@@ -104,12 +103,12 @@ position = [
     "Vice-president",
     "Partner",
     "Leader",
-    "Co-ordinator",
+    "Coordinator",
     "Engineer",
     "Officer",
     "Analyst",
     "Consultant",
-    "Advisor",
+    "Advisory",
     "Estimator",
     "Professional",
     "Supervisor",
@@ -122,6 +121,7 @@ position = [
     "Counsel",
     "Underwriter"
     ]
+
 
 def print_job_title():
     adj1 = random.randrange(len(adjective1))
@@ -136,7 +136,7 @@ def print_job_title():
     if adjective3[adj3] != "":
         jobtitle += adjective3[adj3] + " "
     if position[pos] != "":
-        jobtitle += position[pos]        
+        jobtitle += position[pos]
     print("Your new job title:")
     print(jobtitle)
 

@@ -35,7 +35,8 @@ adjective2 = [
     "Licenced",
     "Retail",
     "Office",
-    "Industrial"
+    "Industrial",
+    "International"
     ]
 
 adjective3 = [
@@ -88,7 +89,9 @@ adjective3 = [
     "Debt",
     "Portfolio",
     "Acquisitions",
-    "Performance"
+    "Performance",
+    "Economic",
+    "Tax"
     ]
 
 position = [
@@ -119,7 +122,12 @@ position = [
     "Economist",
     "Controller",
     "Counsel",
-    "Underwriter"
+    "Underwriter",
+    "Broker",
+    "Operator",
+    "Superintendent",
+    "Surveyor",
+    "Researcher"
     ]
 
 

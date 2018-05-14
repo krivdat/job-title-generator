@@ -17,8 +17,6 @@ with open(adj3_fname) as f:
 with open(pos_fname) as f:
     positions = f.readlines()
 
-print(adjectives1)
-
 
 def print_job_title():
     adj1 = random.randrange(len(adjectives1))

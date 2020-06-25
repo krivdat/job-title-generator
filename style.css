@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.job-title-container {
+  background: #dfdfdf;
+  padding: 1rem;
+  margin: 0 auto 1rem auto;
+  max-width: 800px;
+}
+
+.job-title-container div {
+  font-size: x-large;
+  background: white;
+  color: black;
+  padding: 0.3em;
+  margin-bottom: 1rem;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.generate-btn {
+  padding: 0.7em;
+}
+
+footer {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: small;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-top: 1px dotted gray;
+}
+
+footer p {
+  margin-top: 0;
+}

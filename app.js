@@ -2,28 +2,29 @@
 
 let words = {};
 const jobTitle = document.getElementById("job-title");
-const generateBtn = document.querySelector(".generate-btn");
 
-fetch("./words.json")
-  .then(function (resp) {
-    return resp.json();
-  })
-  .then(initialTitle);
+initWords().catch((error) => {
+  console.log("error!");
+  console.error(error);
+});
 
-function initialTitle(data) {
-  words = data;
+async function initWords() {
+  const resp = await fetch("./words.json");
+  words = await resp.json();
+  const generateBtn = document.querySelector(".generate-btn");
   generateBtn.addEventListener("click", genJobTitle);
   genJobTitle();
+  console.log("all done");
 }
 
 function genJobTitle() {
-  let adj1 = Math.floor(Math.random() * words.adjective1.length);
-  let adj2 = Math.floor(Math.random() * words.adjective2.length);
-  let adj3 = Math.floor(Math.random() * words.adjective2.length);
-  let pos = Math.floor(Math.random() * words.position.length);
-  let adjective1 = words.adjective1[adj1];
-  let adjective2 = words.adjective2[adj2];
-  let adjective3 = words.adjective3[adj3];
-  let position = words.position[pos];
+  const adj1 = Math.floor(Math.random() * words.adjective1.length);
+  const adj2 = Math.floor(Math.random() * words.adjective2.length);
+  const adj3 = Math.floor(Math.random() * words.adjective2.length);
+  const pos = Math.floor(Math.random() * words.position.length);
+  const adjective1 = words.adjective1[adj1];
+  const adjective2 = words.adjective2[adj2];
+  const adjective3 = words.adjective3[adj3];
+  const position = words.position[pos];
   jobTitle.textContent = `${adjective1} ${adjective2} ${adjective3} ${position}`;
 }

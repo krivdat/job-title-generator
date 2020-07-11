@@ -9,5 +9,5 @@ Python application:
 Just press ENTER repeatedly to create different random job titles based on four words sources. Press "q" to quit.
 Enjoy.
 
-Web site JS version:
-Click on "Generate job title" to generate new random title. Must be run under a webserver (just loading index.html in web browser will not work).
+Web JS version:
+Click on "Generate job title" to generate new random title. Must be run under a webserver (just loading index.html in web browser will not work). Live version at: http://tomas.krivda.eu/job-title-generator/

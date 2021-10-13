@@ -34,7 +34,8 @@
     "Retail",
     "Office",
     "Industrial",
-    "International"
+    "International",
+    "Deputy"
   ],
   "adjective3": [
     "Development",
@@ -88,7 +89,12 @@
     "Acquisitions",
     "Performance",
     "Economic",
-    "Tax"
+    "Tax",
+    "HR",
+    "Hospitality",
+    "Residential",
+    "Infrastructure",
+    "F&B"
   ],
   "position": [
     "Director",
@@ -123,6 +129,7 @@
     "Operator",
     "Superintendent",
     "Surveyor",
-    "Researcher"
+    "Researcher",
+    "Receptionist"
   ]
 }

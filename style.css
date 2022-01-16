@@ -5,12 +5,14 @@
 body {
   text-align: center;
   font-family: sans-serif;
+  padding: 8px;
 }
 
 .job-title-container {
   background: #dfdfdf;
   padding: 1rem;
   margin: 0 auto 1rem auto;
+  width: 100%;
   max-width: 800px;
 }
 
@@ -26,6 +28,8 @@ body {
 
 .generate-btn {
   padding: 0.7em;
+  margin: 0 auto;
+  max-width: 200px;
 }
 
 footer {

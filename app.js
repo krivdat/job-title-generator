@@ -1,20 +1,17 @@
-// code to be added
-
 let words = {};
-const jobTitle = document.getElementById("job-title");
+const jobTitle = document.getElementById('job-title');
 
 initWords().catch((error) => {
-  console.log("error!");
   console.error(error);
 });
 
 async function initWords() {
-  const resp = await fetch("./words.json");
+  const resp = await fetch('./words.json');
   words = await resp.json();
-  const generateBtn = document.querySelector(".generate-btn");
-  generateBtn.addEventListener("click", genJobTitle);
+  const generateBtn = document.querySelector('.generate-btn');
+  generateBtn.addEventListener('click', genJobTitle);
   genJobTitle();
-  console.log("all done");
+  console.log('all done');
 }
 
 function genJobTitle() {

@@ -1,155 +1,46 @@
 import random
 
-adjective1 = [
-    "Key",
-    "Top",
-    "Main",
-    "Chief",
-    "Assistant to",
-    "Advisory to",
-    "Personal Assistant to",
-    "Part Time",
-    ""
-    ]
+adj1_fname = "adjective1.txt"
+adj2_fname = "adjective2.txt"
+adj3_fname = "adjective3.txt"
+pos_fname = "position.txt"
 
-adjective2 = [
-    "Senior",
-    "Junior",
-    "Regional",
-    "Country",
-    "Associate",
-    "Head",
-    "Super",
-    "Local",
-    "Global",
-    "Assistant",
-    "Independent",
-    "Full-time",
-    "Division",
-    "National",
-    "Creative",
-    "Dedicated",
-    "Operations",
-    "Improvement",
-    "Area",
-    "Licenced",
-    "Retail",
-    "Office",
-    "Industrial",
-    "International"
-    ]
+with open(adj1_fname) as f:
+    adjectives1 = f.readlines()
 
-adjective3 = [
-    "Development",
-    "Technical",
-    "Business",
-    "Financial",
-    "IT",
-    "Project",
-    "Cost",
-    "Managing",
-    "Commercial",
-    "Procurement",
-    "Cleaning",
-    "Team",
-    "Real Estate",
-    "Sales",
-    "Property",
-    "Asset",
-    "Facility",
-    "Cashflow",
-    "Creative",
-    "Operation",
-    "Letting",
-    "Enterprise",
-    "Corporate",
-    "Accounting",
-    "Green Building",
-    "Construction",
-    "Marketing",
-    "Investment",
-    "Customer",
-    "Support",
-    "Feedback",
-    "Reconciliation",
-    "Volume Rebates",
-    "Sales Support",
-    "Master",
-    "Safety",
-    "Process",
-    "Research",
-    "Leasing",
-    "Strategy",
-    "Planning",
-    "Due Diligence",
-    "Loan",
-    "Risk",
-    "Valuations",
-    "Insurance",
-    "Debt",
-    "Portfolio",
-    "Acquisitions",
-    "Performance",
-    "Economic",
-    "Tax"
-    ]
+with open(adj2_fname) as f:
+    adjectives2 = f.readlines()
 
-position = [
-    "Director",
-    "Manager",
-    "Administrator",
-    "Architect",
-    "Representative",
-    "Specialist",
-    "Boss",
-    "President",
-    "Vice-president",
-    "Partner",
-    "Leader",
-    "Coordinator",
-    "Engineer",
-    "Officer",
-    "Analyst",
-    "Consultant",
-    "Advisory",
-    "Estimator",
-    "Professional",
-    "Supervisor",
-    "Messenger",
-    "Executive",
-    "Agent",
-    "Appraiser",
-    "Economist",
-    "Controller",
-    "Counsel",
-    "Underwriter",
-    "Broker",
-    "Operator",
-    "Superintendent",
-    "Surveyor",
-    "Researcher"
-    ]
+with open(adj3_fname) as f:
+    adjectives3 = f.readlines()
+
+with open(pos_fname) as f:
+    positions = f.readlines()
 
 
 def print_job_title():
-    adj1 = random.randrange(len(adjective1))
-    adj2 = random.randrange(len(adjective2))
-    adj3 = random.randrange(len(adjective3))
-    pos = random.randrange(len(position))
+    adj1 = random.randrange(len(adjectives1))
+    adj2 = random.randrange(len(adjectives2))
+    adj3 = random.randrange(len(adjectives3))
+    pos = random.randrange(len(positions))
     jobtitle = ""
-    if adjective1[adj1] != "":
-        jobtitle += adjective1[adj1] + " "
-    if adjective2[adj2] != "":
-        jobtitle += adjective2[adj2] + " "
-    if adjective3[adj3] != "":
-        jobtitle += adjective3[adj3] + " "
-    if position[pos] != "":
-        jobtitle += position[pos]
+    if adjectives1[adj1] != "":
+        jobtitle += adjectives1[adj1].rstrip() + " "
+    if adjectives2[adj2] != "":
+        jobtitle += adjectives2[adj2].rstrip() + " "
+    if adjectives3[adj3] != "":
+        jobtitle += adjectives3[adj3].rstrip() + " "
+    if positions[pos] != "":
+        jobtitle += positions[pos].rstrip()
     print("Your new job title:")
     print(jobtitle)
 
 resp = ""
-while resp.lower() != "q":
-    print_job_title()
-    resp = input("\nPress ENTER to generate new job title, or type 'q' to quit: ")
-    print("")
+while True:
+    resp = input("Press ENTER to generate new job title, or type 'q' to quit: ")
+    if resp.lower() == "q":
+        print("Thank you for using Job Title Generator v2.0.")
+        break
+    else:
+        print_job_title()
+        print("")
